@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 > Phone Store</h1>
+     <table width="70%" border="1">
+        <tr>
+            <a class="btn_index" href="/insert"><input type="submit" id="btn" value="Add"></a>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Delete</td>
+        </tr>
+        {{# each sanPham}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td><a href="/delete?id={{_id}}">Delete</a></td>
+        </tr>  
+        {{/each}}
+    </table>
+</body>
+</html>
